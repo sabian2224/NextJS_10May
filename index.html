@@ -4,9 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Python.org</title>
+
+  <style>
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .top-header {
+      background-color: #1e2933;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid black;
+      height: 50px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #1f3b47;
+      
+    }
+
+    .nav-container ul {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: stretch;
+      padding-inline-start: 0px;
+
+    }
+
+    .nav-container ul li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none ;
+      color: #999;
+      background: transparent;
+      cursor: pointer;
+      border-left: 1px solid #273643;
+      border-right: 1px solid #11171d;
+      flex: 1;
+      border-top: 3px solid ;
+    }
+
+    .nav-container ul li:hover { 
+    background-image: -webkit-linear-gradient(#13191e 10%, #1f2a32 90%);
+    }
+
+
+
+    .navbar{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
 
+
+  <div class="top-header">
+    <nav class="navbar">
+      <div class="nav-container container">
+        <ul>
+          <li style="border-top-color: #3776ab;">Python</li>
+          <li style="border-top-color: #78797a;">PSF</li>
+          <li style="border-top-color: #ffd343;">Docs</li>
+          <li style="border-top-color:#82b043;">PyPI</li>
+          <li style="border-top-color: #a06ba7;">Jobs</li>
+          <li style="border-top-color: #b55863;">Community</li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   
   
 </body>
