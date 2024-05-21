@@ -11,6 +11,7 @@
     /*General styles*/
     body {
       font-family: Arial, Helvetica, sans-serif;
+      margin: 0px!important;
     }
 
     .container {
@@ -86,7 +87,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 50px;
+      padding: 20px 50px;
       background-color: #234c6d;
       margin-top: 50px;
       flex-direction: column;
@@ -95,11 +96,12 @@
 
     .header-logo-container {
       flex: 1;
+      cursor: pointer;
     }
 
     .main-header-top {
       display: flex;
-      padding: 20px;
+      padding: 0px 20px;
       align-items: center;
     }
 
@@ -119,7 +121,7 @@
       border-bottom: 1px solid #070a0c;
       background-color: #1e2933;
       border-radius: 6px;
-      padding: 15px;
+      padding: 7px 10px;
     }
 
     .searchbox .search-icon {
@@ -129,26 +131,57 @@
 
     .searchbox input {
       height: 30px;
+      padding: 4px 40px 4px 5px;
+      cursor: pointer;
     }
+
+    .searchbox input::placeholder {
+      color: #bbbbbb;
+      font-size: 16px;
+    }
+    
   
     .go-button{
     color: #e6e8ea !important;
     text-shadow: none;
     background-color: #2b5b84;
-    background-image: -webkit-linear-gradient(#3776ab 10%, #2b5b84 90%);
     background-image: linear-gradient(#3776ab 10%, #2b5b84 90%);
-    border-top: 1px solid #3d83be;
-    border-right: 1px solid #3776ab;
-    border-bottom: 1px solid #3776ab;
-    border-left: 1px solid #3d83be;
+    border: 1px solid #3d83be;
     box-shadow: inset 0 0 5px rgba(55, 118, 171, 0.2);
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0px 10px;
+    cursor: pointer;
 }
+
+  .go-button:hover {
+    background-image: linear-gradient(#1f4b70 10%, #2b5b84 90%);
+  }
   
+
+  .donate-button {
+    background-color: #ffd343;
+    border: 1px solid #dca900;
+    background-image: linear-gradient(#ffdf77 30%, #ffd13a 90%);
+    font-size: 14px;
+    padding: 7px 14px;
+    margin-right: 10px;
+    color: #4d4d4d !important;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 1s;
+  }
+
+  .donate-button:hover {
+    background-image: linear-gradient(#ffe388 30%, #ffd13a 90%);
+  }
+
+
+  .socialize-dropdown {
+    cursor: pointer;
+  }
+ 
   </style>
 </head>
 <body>
@@ -186,13 +219,28 @@
           class="python-logo">
         </div>
 
-          <button>Donate</button>
+          <button class="donate-button">Donate</button>
           <div class="searchbox">
             <img src="assets/img/icons/search-icon.svg" alt="search icon"
             class="search-icon">
             <input type="text" placeholder="Search">
             <button class="go-button">Go</button>
-            <button class="socialize-button">Socialize</button>
+            <a class="socialize-dropdown">Socialize</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href=""><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-mastodon"></i>Mastodon</a>
+              </li>
+              <li>
+                Chat on IRC
+              </li>
+              <li>
+                Twitter
+              </li>
+            </ul>
+
           </div>
       </div>
       <!--Top of main header end-->
@@ -203,6 +251,8 @@
   </header>
 
   
+
+  <script src="https://kit.fontawesome.com/7ad40073d0.js" crossorigin="anonymous"></script>
   
 </body>
 </html>
