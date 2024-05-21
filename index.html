@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Python.org</title>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon-precomposed.png">
 
   <style>
 
+    /*General styles*/
     body {
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -16,6 +18,17 @@
       max-width: 1200px;
     }
 
+    .d-flex {
+      display: flex;
+    }
+
+    .d-flex-center{
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /*Top Header*/
     .top-header {
       background-color: #1e2933;
       position: absolute;
@@ -41,7 +54,6 @@
       width: 100%;
       align-items: stretch;
       padding-inline-start: 0px;
-
     }
 
     .nav-container ul li{
@@ -61,19 +73,89 @@
     .nav-container ul li:hover { 
     background-image: -webkit-linear-gradient(#13191e 10%, #1f2a32 90%);
     }
-
-
-
     .navbar{
       width: 100%;
       display: flex;
       justify-content: center;
     }
+    /*End Header Styles*/
+
+
+    /*Main Header*/
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      background-color: #234c6d;
+      margin-top: 50px;
+      flex-direction: column;
+    }
+    
+
+    .header-logo-container {
+      flex: 1;
+    }
+
+    .main-header-top {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+    }
+
+
+
+    .python-logo {
+     width: 300px;
+    }
+
+    .searchbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1e2933;
+      color: #bbb;
+      border-top: 1px solid #2d3e4d;
+      border-bottom: 1px solid #070a0c;
+      background-color: #1e2933;
+      border-radius: 6px;
+      padding: 15px;
+    }
+
+    .searchbox .search-icon {
+      width: 30px;
+      margin: 0px 10px;
+    }
+
+    .searchbox input {
+      height: 30px;
+    }
+  
+    .go-button{
+    color: #e6e8ea !important;
+    text-shadow: none;
+    background-color: #2b5b84;
+    background-image: -webkit-linear-gradient(#3776ab 10%, #2b5b84 90%);
+    background-image: linear-gradient(#3776ab 10%, #2b5b84 90%);
+    border-top: 1px solid #3d83be;
+    border-right: 1px solid #3776ab;
+    border-bottom: 1px solid #3776ab;
+    border-left: 1px solid #3d83be;
+    box-shadow: inset 0 0 5px rgba(55, 118, 171, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  
   </style>
 </head>
 <body>
 
 
+
+  <!--Top Header-->
   <div class="top-header">
     <nav class="navbar">
       <div class="nav-container container">
@@ -88,6 +170,38 @@
       </div>
     </nav>
   </div>
+
+
+  <!-- Main Header -->
+  <header class="header">
+
+    <div class="container" style="background-color: #82b043; height: 300px;">
+
+      <!--Top of main header-->
+      <div class="main-header-top"
+      style="background-color: lightblue;">
+
+        <div class="header-logo-container">
+          <img src="assets/img/python-logo@2x.png" alt="Python Logo"
+          class="python-logo">
+        </div>
+
+          <button>Donate</button>
+          <div class="searchbox">
+            <img src="assets/img/icons/search-icon.svg" alt="search icon"
+            class="search-icon">
+            <input type="text" placeholder="Search">
+            <button class="go-button">Go</button>
+            <button class="socialize-button">Socialize</button>
+          </div>
+      </div>
+      <!--Top of main header end-->
+
+
+    </div>
+
+  </header>
+
   
   
 </body>
