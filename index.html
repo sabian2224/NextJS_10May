@@ -122,6 +122,7 @@
       background-color: #1e2933;
       border-radius: 6px;
       padding: 7px 10px;
+      padding-right: 0px;
     }
 
     .searchbox .search-icon {
@@ -178,19 +179,74 @@
   }
 
 
+  .dropdown {
+    position: relative;
+    background-color: red;
+    padding: 15px;
+    cursor: pointer;
+  }
+
+  .gray:hover {
+    background-color: gray;
+  }
+
+
+
+
+/* Add this CSS block */
+.dropdown-content:hover + .socialize-dropdown {
+  background-color: gray;
+}
+
+
   .socialize-dropdown {
     cursor: pointer;
   }
 
+  .socialize-dropdown:hover + .dropdown-content,
+  .dropdown-content:hover{
+  display: block; 
+  }
+
+  .dropdown-content,.dropdown-content:hover + .socialize-dropdown,.socialize-dropdown:hover {
+    background-color: gray;
+  }
+
+  /* Add this CSS block */
+.dropdown-content:hover + .socialize-dropdown {
+  background-color: gray;
+}
+
+  .socialize-dropdown {
+    padding-bottom: 20px;
+  }
+
   .dropdown-content {
     background-color: gray;
-    display: block;
+    display: ;
     position: absolute;
+    top: 30px;
+    right: 0;
+    padding: 0;
+    width: 150px;
   }
 
   .dropdown-content li {
+    padding: 5px 5px;
+  }
+
+  .dropdown-content li:hover{
+    background-color: rgb(81, 81, 81);
+  }
+
+  .dropdown-content li:hover,a:hover,i:hover{
+    color: white !important;
+  }
+
+
+
+  .dropdown-content li {
     list-style: none;
-    
   }
  
   .dropdown-content a {
@@ -241,21 +297,28 @@
             class="search-icon">
             <input type="text" placeholder="Search">
             <button class="go-button">Go</button>
-            <a class="socialize-dropdown">Socialize</a>
-            <ul class="dropdown-content">
-              <li>
-                <a href=""><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-              </li>
-              <li>
-                <a href=""><i class="fa-brands fa-mastodon"></i>Mastodon</a>
-              </li>
-              <li>
-                <a href=""><i class="fa-solid fa-fan"></i>Chat on IRC</a>
-              </li>
-              <li>
-               <a href=""><i class="fa-brands fa-twitter"></i>Twitter</a> 
-              </li>
-            </ul>
+
+
+            <!--Dropdown Container-->
+            <div class="dropdown gray">
+              <a class="socialize-dropdown gray">Socialize</a>
+              <ul class="dropdown-content gray">
+                <li>
+                  <a href=""><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-mastodon"></i>Mastodon</a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-solid fa-fan"></i>Chat on IRC</a>
+                </li>
+                <li>
+                 <a href=""><i class="fa-brands fa-twitter"></i>Twitter</a> 
+                </li>
+              </ul>
+            </div>
+            <!--End Dropdown Container-->
+           
 
           </div>
       </div>
